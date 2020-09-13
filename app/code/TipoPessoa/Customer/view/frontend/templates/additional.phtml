@@ -1,0 +1,48 @@
+<div class="field tipo_pessoa required">
+    <label class="label" for="tipo_pessoa">
+     	<span><?= $block->escapeHtml(__('Tipo de cadastro')) ?></span>
+    </label>
+    <div class="control">
+    	<select name="tipo_pessoa" id="tipo_pessoa" class="input-text">
+    		<option value="" selected>Selecione</option>
+            <option value="1">Pessoa física</option>
+            <option value="2">Pessoa jurídica</option>
+    	</select>
+    </div>
+</div>
+
+<div class="field inscricao_estadual" style="display:none;">
+    <label class="label" for="inscricao_estadual">
+     	<span><?= $block->escapeHtml(__('Inscrição estadual')) ?></span>
+    </label>
+    <div class="control">
+    	<input type="text" name="inscricao_estadual">
+    </div>
+</div>
+
+<div class="field tipo_compra" style="display:none;">
+    <label class="label" for="tipo_compra">
+     	<span><?= $block->escapeHtml(__('Tipo de compra')) ?></span>
+    </label>
+    <div class="control">
+    	<select name="tipo_compra" id="tipo_compra" class="input-text">
+    		<option value="" selected>Selecione</option>
+            <option value="1">Uso próprio</option>
+            <option value="2">Revenda</option>
+    	</select>
+    </div>
+</div>
+
+<script type="text/javascript">
+	require(['jquery'], function($){
+	    $("#tipo_pessoa").on('change', function() {
+	        if ($(this).val() == 2) {
+	        	$('.tipo_compra').show();
+	        	$('.inscricao_estadual').show();
+	        } else {
+	        	$('.tipo_compra').hide();
+	        	$('.inscricao_estadual').hide();
+	        }
+	    });
+	});
+</script>
