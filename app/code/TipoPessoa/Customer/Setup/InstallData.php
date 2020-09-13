@@ -62,7 +62,6 @@ class InstallData implements InstallDataInterface
 			['adminhtml_customer', 'customer_account_edit', 'customer_account_create']
 		);
 
-		// $tipo_pessoa->save();
 		$this->attributeResource->save($tipo_pessoa);
 
 
@@ -98,7 +97,6 @@ class InstallData implements InstallDataInterface
 			['adminhtml_customer', 'customer_account_edit', 'customer_account_create']
 		);
 
-		// $inscricao_estadual->save();
 		$this->attributeResource->save($inscricao_estadual);
 
 
@@ -134,7 +132,6 @@ class InstallData implements InstallDataInterface
 			['adminhtml_customer', 'customer_account_edit', 'customer_account_create']
 		);
 
-		// $tipo_compra->save();
 		$this->attributeResource->save($tipo_compra);
 
 		$setup->endSetup();
